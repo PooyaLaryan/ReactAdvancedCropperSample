@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.cropper {
+  vertical-align: middle;
+  width: 400px;
+  height: auto;
+  background: #DDD;
+}
+
+.CropperStyle{
+  width: 400px;
+  background-color: aqua;
+  height: 900px;
+  float: left;
+}
+
+.DetailStyle{
+  width: 400px;
+  background-color: blue;
+  height: auto;
+  float: left;
+}
