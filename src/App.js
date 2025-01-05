@@ -1,3 +1,4 @@
+import './App.css';
 import React, { useRef, useState } from 'react';
 import { Cropper } from 'react-advanced-cropper';
 import 'react-advanced-cropper/dist/style.css'
@@ -33,30 +34,35 @@ const ImageCropper = () => {
     };
 
     return (
-        <div>
-            <h1>React Advanced Cropper Example</h1>
-            
-            {/* Image upload input */}
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
-            
-            {/* Cropper component */}
-            {image && (
-                <div style={{ width: '500px', height: '500px' }}>
-                    <Cropper
-                        ref={cropperRef}
-                        src={image}
-                        // stencilProps={{
-                        //     aspectRatio: 1,
-                        // }}
-                        style={{
-                            height: '500px',
-                            width: '100%',
-                        }}
-                    />
-                </div>
-            )}
-            
-            {/* Button to get cropped base64 image */}
+        <div className="container">
+            <div className="left">
+
+                <h1>React Advanced Cropper Example</h1>
+                
+                {/* Image upload input */}
+                <input type="file" accept="image/*" onChange={handleImageUpload} />
+                
+                {/* Cropper component */}
+                {image && (
+                    <div style={{ width: '500px', height: '500px' }}>
+                        <Cropper
+                            ref={cropperRef}
+                            src={image}
+                            // stencilProps={{
+                            //     aspectRatio: 1,
+                            // }}
+                            style={{
+                                height: '500px',
+                                width: '100%',
+                            }}
+                        />
+                    </div>
+                )}
+
+
+            </div>
+            <div className="right">
+                {/* Button to get cropped base64 image */}
             <button onClick={handleGetCroppedImage}>Get Cropped Image</button>
             
             {/* Display cropped image */}
@@ -66,6 +72,8 @@ const ImageCropper = () => {
                     <img src={croppedImageBase64} alt="Cropped" />
                 </div>
             )}
+
+            </div>
         </div>
     );
 };
